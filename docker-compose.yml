@@ -1,0 +1,35 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: todo-mysql
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: todo_db
+
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  backend:
+    build: ./backend
+    container_name: todo-backend
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - mysql
+
+  frontend:
+    build: ./frontend
+    container_name: todo-frontend
+
+    ports:
+      - "3000:80"
+
+    depends_on:
+      - backend
+
+volumes:
+  mysql-data:

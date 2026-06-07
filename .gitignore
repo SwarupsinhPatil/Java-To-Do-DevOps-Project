@@ -1,0 +1,25 @@
+# Java
+*.class
+*.log
+
+# Maven
+target/
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Docker volumes
+mysql-data/
+
+# Node modules (future frontend)
+node_modules/

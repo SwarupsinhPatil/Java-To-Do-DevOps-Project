@@ -1,0 +1,101 @@
+:root {
+    --bg: #f4f7fb;
+    --card: white;
+    --text: #222;
+    --primary: #2563eb;
+}
+
+.dark {
+    --bg: #121212;
+    --card: #1f1f1f;
+    --text: white;
+    --primary: #60a5fa;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:0.3s;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+    display:flex;
+    gap:10px;
+}
+
+input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:var(--primary);
+    color:white;
+}
+
+.task{
+    background:var(--card);
+    margin-top:15px;
+    padding:15px;
+
+    border-radius:15px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    animation:slideIn .3s ease;
+}
+
+.completed{
+    text-decoration:line-through;
+    opacity:.6;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+}
+
+@keyframes slideIn{
+    from{
+        transform:translateY(10px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}

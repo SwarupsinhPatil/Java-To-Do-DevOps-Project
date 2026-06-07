@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>🚀 TaskFlow Dashboard</h1>
+
+        <button id="themeToggle">
+            🌙 Dark Mode
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+        >
+
+        <button onclick="addTask()">
+            Add Task
+        </button>
+
+    </div>
+
+    <div id="taskList"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
