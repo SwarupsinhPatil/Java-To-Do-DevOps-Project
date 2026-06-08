@@ -1,5 +1,4 @@
-const API = "http://localhost:8080/tasks";
-
+const API = "http://43.204.214.112:30080/tasks";
 loadTasks();
 
 async function loadTasks() {
