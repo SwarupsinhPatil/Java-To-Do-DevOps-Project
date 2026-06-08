@@ -21,7 +21,7 @@ spec:
       containers:
       - name: backend
 
-        image: swarupsinh10/todo-backend:v1
+        image: swarupsinh10/todo-backend:latest
 
         ports:
         - containerPort: 8080
